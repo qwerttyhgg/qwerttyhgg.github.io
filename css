@@ -21,7 +21,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   padding: 6px 10px;
-  transition: 0.3s;
+  transition: 0.3;
 }
 
 /* 悬停效果 */
@@ -41,4 +41,15 @@ body {
 /* 防止内容被导航栏挡住 */
 body {
   padding-top: 60px;
+}
+.card {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
