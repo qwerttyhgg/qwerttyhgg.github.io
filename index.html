@@ -2,25 +2,103 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人主页</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-    
-   
+    <style>
+        /* 1. 基础设置 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #f5f5f5; /* 浅灰色背景 */
+            text-align: center;
+        }
+
+        /* 2. 导航栏样式 - 固定在顶部 */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #222;
+            padding: 15px 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3;
+        }
+
+        .nav a:hover {
+            color: #ffeb3b; /* 悬停变黄色 */
+        }
+
+        .nav a.active {
+            border-bottom: 2px solid yellow;
+            color: yellow;
+        }
+
+        /* 3. 个人卡片容器 - 负责居中 */
+        .container {
+            margin-top: 100px; /* 给导航栏留出空间 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        /* 4. 头像变圆的关键代码 */
+        .avatar {
+            width: 150px;       /* 必须设置固定的宽度 */
+            height: 150px;      /* 必须设置固定的高度，且与宽度一致 */
+            border-radius: 50%; /* 50% 强制变圆 */
+            object-fit: cover;  /* 防止图片拉伸变形 */
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <div class="nav">  
-<a href="index.html" class="active">首页</a>  
-<a href="game.html">游戏</a>  
-<a href="projects.html">项目</a>
-</div>
 
-    <div class="card">
-  <img src="079155e90bed1d505c402e29e36766c8.jpg" class="avatar">
+    <div class="nav">  
+        <a href="index.html" class="active">首页</a>  
+        <a href="game.html">游戏</a>  
+        <a href="projects.html">项目</a>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="079155e90bed1d505c402e29e36766c8.jpg" class="avatar" alt="我的头像">
+            <h1>👋 欢迎来到我的个人网站</h1>
+            <p>这是我的第一个 GitHub Pages 页面。</p>
+            <p>🚀 目前正在努力学习编程中！</p>
         </div>
-        
-    <h1>👋 欢迎来到我的个人网站</h1>
-    <p>这是我的第一个 GitHub Pages 页面。</p>
-    <p>🚀 目前正在学习编程！</p>
+    </div>
+
 </body>
 </html>
