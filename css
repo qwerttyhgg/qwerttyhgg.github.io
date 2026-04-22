@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* 导航栏固定 */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  padding: 12px 0;
+  text-align: center;
+  z-index: 999;
+}
+
+/* 链接样式 */
+.nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+/* 悬停效果 */
+.nav a:hover {
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+/* 当前页面高亮 */
+.nav a.active {
+  background: yellow;
+  color: black;
+  border-radius: 5px;
+}
+
+/* 防止内容被导航栏挡住 */
+body {
+  padding-top: 60px;
+}
